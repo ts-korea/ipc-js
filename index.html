@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h2>Hello</h2>
+        <button id="btn">얍</button>
+        <script>
+            const {ipcRenderer} = require('electron');
+            const button = document.getElementById('btn');
+            button.addEventListener('click', () => {
+                console.error('click');
+                ipcRenderer.send('hello', 'world');
+            });
+        </script>
+    </body>
+</html>
